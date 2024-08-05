@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graza Website</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="bg-primary text-fontColor">
+    <header class="border-b border-fontColor max-w-full">
+        <p class="font-normal-font flex justify-center text-xs font-medium tracking-tighter leading-5">NEW! MEET THE REFILL CANS</p>
+    </header>
+    <main class="flex max-w-full">
+        <div id="rightSide" class="w-1/2 h-screen">
+            <img src="bottleImage.webp" class="w-full h-full object-cover">
+        </div>
+        <div id="leftSide" class="w-1/2 flex flex-col items-center">
+            <div id="Navbar" class="flex justify-end text-fontColor font-normal font-normal-font mt-5 tracking-wider text-lg w-full">
+                <a class="mr-10 cursor-pointer">Shop</a>
+                <a class="mr-10 cursor-pointer">Get Refills</a>
+                <a class="mr-10 cursor-pointer">About</a>
+                <a class="mr-16 cursor-pointer">Glog</a>
+                <button class="border flex items-center border-fontColor py-1 px-6 bg-fillColor hover:bg-hoverColor relative bottom-1 rounded-full mr-16">Cart [0]</button>
+            </div>
+            <div id="title" class="flex flex-col items-center font-header-font text-5xl tracking-tighter mt-10">
+                <p>"The Duo"</p>
+                <p class="border-b-2 pb-0.5 border-fontColor mt-2">Drizzle & Sizzle Set</p>
+            </div>
+            <div id="reviews" class="flex justify-center font-normal-font mt-6">
+                <p class="text-xl leading-relaxed">★★★★★ </p><pre class="text-lg"> 2192 Reviews</pre>
+            </div>
+            <div id="buyingSection" class="border w-2/3 border-fontColor mt-4 p-5 rounded-2xl bg-fillColor font-normal-font text-lg tracking-wider">
+                <p>Quantity</p>
+                <div id="quantityOptions" class="grid grid-cols-2 md:grid-cols-4 gap-2 mt-2">
+                    <div class="h-20 rounded-lg border border-fontColor cursor-pointer">
+                        <div class="w-full h-2/5 bg-fontColor rounded-t-lg flex justify-center items-center font-discount-font tracking-tight font-bold">
+                            <p class="text-fillColor text-xs">+10% Off</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <p class="text-2xl leading-3 mt-3">1</p><p class="text-base">Set</p>
+                        </div>
+                    </div>
+                    <div class="h-20 rounded-lg border border-fontColor cursor-pointer">
+                        <div class="w-full h-2/5 bg-fontColor rounded-t-lg text-fillColor text-xs font-discount-font flex flex-col justify-center items-center tracking-tight font-bold leading-4">
+                            <p>Free Shipping!</p>
+                            <p>+14% Off</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <p class="text-2xl leading-3 mt-3">2</p><p class="text-base">Sets</p>
+                        </div>
+                    </div>
+                    <div class="h-20 rounded-lg border border-fontColor cursor-pointer">
+                        <div class="w-full h-2/5 bg-fontColor rounded-t-lg text-fillColor text-xs font-discount-font flex flex-col justify-center items-center tracking-tight font-bold leading-4">
+                            <p>Free Shipping!</p>
+                            <p>+15% Off</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <p class="text-2xl leading-3 mt-3">3</p><p class="text-base">Sets</p>
+                        </div>
+                    </div>
+                    <div class="h-20 rounded-lg border border-fontColor cursor-pointer">
+                        <div class="w-full h-2/5 bg-fontColor rounded-t-lg text-fillColor text-xs font-discount-font flex flex-col justify-center items-center tracking-tight font-bold leading-4">
+                            <p>Free Shipping!</p>
+                            <p>+17% Off</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <p class="text-2xl leading-3 mt-3">6</p><p class="text-base">Sets</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-14 mt-3 border-dashed border-t border-fontColor flex items-center cursor-pointer">
+                    <div class="h-5 w-5 border border-fontColor rounded-full"></div>
+                    <p class="ml-2">One Time Purchase</p>
+                </div>
+                <div class="h-14 border-dashed border-t border-fontColor flex items-center cursor-pointer">
+                    <div class="h-5 w-5 border border-fontColor rounded-full"></div>
+                    <p class="ml-2">Subscribe & Save</p>
+                </div>
+                <div class="border border-fontColor rounded-full cursor-pointer flex items-center h-8">
+                    <p class="pl-5">Frequency: Every 1 Month</p>
+                </div>
+                <div class="mt-4 h-4 border-dashed border-t border-fontColor"></div>
+                <div class="border border-fontColor rounded-full cursor-pointer flex items-center justify-center bg-hoverColor h-9">
+                    <p>Subscribe - $33.30</p>
+                </div>
+                <div class="flex justify-center mt-4 leading-tight">
+                    <p>Skip, Edit or Cancel Anytime</p>
+                </div>
+            </div>
+            <div id="detailsSection" class="flex w-2/3 h-5 mt-4 font-normal-font text-lg tracking-wider">
+                <div class="w-1/4 border border-fontColor"></div>
+                <div class="w-1/4 border-y border-fontColor"></div>
+                <div class="w-1/4 border border-fontColor"></div>
+                <div class="w-1/4 border-y border-r border-fontColor"></div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
