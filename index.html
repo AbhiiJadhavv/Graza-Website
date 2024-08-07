@@ -10,20 +10,20 @@
     <header class="border-b border-fontColor max-w-full">
         <p class="font-normal-font flex justify-center text-xs font-semibold tracking-tighter leading-5">NEW! MEET THE REFILL CANS</p>
     </header>
-    <main class="flex max-w-full">
-        <div id="rightSide" class="w-1/2 h-screen sticky top-0">
+    <main class="block md:flex max-w-full">
+        <div id="rightSide" class="w-full md:w-1/2 md:h-screen md:sticky md:top-0">
             <div class="image-container w-full h-full"><img id="mainImage" src="image-1.webp" class="w-full h-full object-cover" alt="image"></div>
-            <div class="h-3/5 w-16 absolute top-64 left-8 flex flex-col items-center justify-between">
-                <div class="imageOption h-16 w-16 border-2 border-fontColor rounded-full flex justify-center items-center cursor-pointer" onclick="changeImage('image-1.webp')"><img src="image-1.webp" class="rounded-full" alt="image"></div>
-                <div class="imageOption h-16 w-16 border-2 border-fontColor rounded-full flex justify-center items-center cursor-pointer" onclick="changeImage('image-2.webp')"><img src="image-2.webp" class="rounded-full" alt="image"></div>
-                <div class="imageOption h-16 w-16 border-2 border-fontColor rounded-full flex justify-center items-center cursor-pointer" onclick="changeImage('image-3.webp')"><img src="image-3.webp" class="rounded-full" alt="image"></div>
-                <div class="imageOption h-16 w-16 border-2 border-fontColor rounded-full flex justify-center items-center cursor-pointer" onclick="changeImage('image-4.webp')"><img src="image-4.webp" class="rounded-full" alt="image"></div>
-                <div class="imageOption h-16 w-16 border-2 border-fontColor rounded-full flex justify-center items-center cursor-pointer" onclick="changeImage('image-5.webp')"><img src="image-5.webp" class="rounded-full" alt="image"></div>
-                <div class="imageOption h-16 w-16 border-2 border-fontColor rounded-full flex justify-center items-center cursor-pointer" onclick="changeImage('image-6.webp')"><img src="image-6.webp" class="rounded-full" alt="image"></div>
+            <div class="h-3/5 w-16 absolute top-64 left-8 hidden md:flex flex-col items-center justify-between">
+                <div class="imageOption h-16 w-16 border-2 border-fillColor rounded-full flex justify-center items-center cursor-pointer" onclick="changeImage('image-1.webp'), changeBorder(this)"><img src="image-1.webp" class="rounded-full" alt="image"></div>
+                <div class="imageOption h-16 w-16 border-2 border-fontColor rounded-full flex justify-center items-center cursor-pointer" onclick="changeImage('image-2.webp'), changeBorder(this)"><img src="image-2.webp" class="rounded-full" alt="image"></div>
+                <div class="imageOption h-16 w-16 border-2 border-fontColor rounded-full flex justify-center items-center cursor-pointer" onclick="changeImage('image-3.webp'), changeBorder(this)"><img src="image-3.webp" class="rounded-full" alt="image"></div>
+                <div class="imageOption h-16 w-16 border-2 border-fontColor rounded-full flex justify-center items-center cursor-pointer" onclick="changeImage('image-4.webp'), changeBorder(this)"><img src="image-4.webp" class="rounded-full" alt="image"></div>
+                <div class="imageOption h-16 w-16 border-2 border-fontColor rounded-full flex justify-center items-center cursor-pointer" onclick="changeImage('image-5.webp'), changeBorder(this)"><img src="image-5.webp" class="rounded-full" alt="image"></div>
+                <div class="imageOption h-16 w-16 border-2 border-fontColor rounded-full flex justify-center items-center cursor-pointer" onclick="changeImage('image-6.webp'), changeBorder(this)"><img src="image-6.webp" class="rounded-full" alt="image"></div>
             </div>
         </div>
-        <div id="leftSide" class="w-1/2 flex flex-col items-center">
-            <div id="Navbar" class="flex justify-end text-fontColor font-medium font-normal-font mt-5 tracking-wider text-lg w-full">
+        <div id="leftSide" class="w-full md:w-1/2 flex flex-col items-center">
+            <div id="Navbar" class="hidden md:flex justify-end text-fontColor font-medium font-normal-font mt-5 tracking-wider text-lg w-full">
                 <a class="mr-10 cursor-pointer">Shop</a>
                 <a class="mr-10 cursor-pointer">Get Refills</a>
                 <a class="mr-10 cursor-pointer">About</a>
@@ -37,14 +37,14 @@
             <div id="reviews" class="flex justify-center font-normal-font mt-6">
                 <p class="text-xl leading-relaxed">★★★★★ </p><pre class="text-lg"> 2192 Reviews</pre>
             </div>
-            <div id="buyingSection" class="border w-2/3 border-fontColor mt-4 p-5 rounded-2xl bg-fillColor font-normal-font text-lg tracking-wider font-medium">
+            <div id="buyingSection" class="border w-full md:w-2/3 border-fontColor mt-4 p-5 rounded-2xl bg-fillColor font-normal-font text-lg tracking-wider font-medium">
                 <p>Quantity</p>
                 <div id="quantityOptions" class="grid grid-cols-2 md:grid-cols-4 gap-2 mt-2">
                     <div class="h-20 rounded-lg border border-fontColor cursor-pointer">
                         <div class="w-full h-2/5 bg-fontColor rounded-t-lg flex justify-center items-center font-discount-font tracking-tight font-bold">
                             <p class="text-fillColor text-xs">+10% Off</p>
                         </div>
-                        <div class="flex flex-col items-center hover:opacity-90">
+                        <div id="set1" class="set flex flex-col items-center hover:opacity-90 bg-greenColor rounded-b-lg border-b-2 border-fontColor">
                             <p class="text-2xl leading-3 mt-3">1</p><p class="text-base">Set</p>
                         </div>
                     </div>
@@ -53,7 +53,7 @@
                             <p>Free Shipping!</p>
                             <p>+14% Off</p>
                         </div>
-                        <div class="flex flex-col items-center hover:opacity-90">
+                        <div class="set flex flex-col items-center hover:opacity-90">
                             <p class="text-2xl leading-3 mt-3">2</p><p class="text-base">Sets</p>
                         </div>
                     </div>
@@ -62,7 +62,7 @@
                             <p>Free Shipping!</p>
                             <p>+15% Off</p>
                         </div>
-                        <div class="flex flex-col items-center hover:opacity-90">
+                        <div class="set flex flex-col items-center hover:opacity-90">
                             <p class="text-2xl leading-3 mt-3">3</p><p class="text-base">Sets</p>
                         </div>
                     </div>
@@ -71,37 +71,40 @@
                             <p>Free Shipping!</p>
                             <p>+17% Off</p>
                         </div>
-                        <div class="flex flex-col items-center hover:opacity-90">
+                        <div class="set flex flex-col items-center hover:opacity-90">
                             <p class="text-2xl leading-3 mt-3">6</p><p class="text-base">Sets</p>
                         </div>
                     </div>
                 </div>
-                <div class="h-14 mt-3 border-dashed border-t border-fontColor flex items-center cursor-pointer hover:opacity-90">
-                    <div class="h-5 w-5 border border-fontColor rounded-full"></div>
-                    <p class="ml-2">One Time Purchase</p>
+                <div id="round1Con" class="h-14 mt-3 border-dashed border-t border-fontColor flex items-center cursor-pointer hover:opacity-90">
+                    <div id="round1" class="h-5 w-5 border border-fontColor rounded-full"></div>
+                    <div class="flex justify-between w-full"><p class="ml-2">One Time Purchase</p><p>$37</p></div>
                 </div>
-                <div class="h-14 border-dashed border-t border-fontColor flex items-center cursor-pointer hover:opacity-90">
-                    <div class="h-5 w-5 border border-fontColor rounded-full"></div>
-                    <p class="ml-2">Subscribe & Save</p>
+                <div id="round2Con" class="h-14 border-dashed border-t border-fontColor flex items-center cursor-pointer hover:opacity-90">
+                    <div id="round2" class="h-5 w-5 border border-fontColor rounded-full bg-greenColor"></div>
+                    <div class="flex justify-between w-full">
+                        <p class="ml-2">Subscribe & Save</p>
+                        <div class="flex"><p class="opacity-50"><s>$37</s></p><p>$33.30</p></div>
+                    </div>
                 </div>
                 <div class="border border-fontColor rounded-full cursor-pointer flex justify-between items-center h-8 hover:opacity-90">
                     <p class="pl-5">Frequency: Every 1 Month</p><img src="arrow-image.png" alt="arrow image" class="h-3 w-3 mr-5">
                 </div>
                 <div class="mt-4 h-4 border-dashed border-t border-fontColor"></div>
-                <div class="border border-fontColor rounded-full cursor-pointer flex items-center justify-center bg-hoverColor h-9 hover:opacity-90">
+                <div class="payment border border-fontColor rounded-full cursor-pointer flex items-center justify-center bg-hoverColor h-9 hover:opacity-90">
                     <p>Subscribe - $33.30</p>
                 </div>
                 <div class="flex justify-center mt-4 leading-tight">
                     <p class="font-normal">Skip, Edit or Cancel Anytime</p>
                 </div>
             </div>
-            <div id="detailsSection" class="flex w-2/3 h-8 mt-9 font-normal-font text-lg tracking-tight font-medium">
-                <div class="w-1/4 border border-fontColor rounded-t-xl flex justify-center items-center cursor-pointer hover:opacity-90"><p>DETAILS</p></div>
-                <div class="w-1/4 border-y border-fontColor rounded-t-xl flex justify-center items-center cursor-pointer hover:opacity-90"><p>HARVEST</p></div>
-                <div class="w-1/4 border border-fontColor rounded-t-xl flex justify-center items-center cursor-pointer hover:opacity-90"><p>USES</p></div>
-                <div class="w-1/4 border-y border-r border-fontColor rounded-t-xl flex justify-center items-center cursor-pointer hover:opacity-90"><p>REFILLS</p></div>
+            <div id="detailsSection" class="flex w-full md:w-2/3 h-8 mt-9 font-normal-font text-lg tracking-tight font-medium">
+                <div id="detailOption1" class="w-1/4 border border-fontColor rounded-t-xl flex justify-center items-center cursor-pointer hover:opacity-90 h-8 text-primary bg-fontColor"><p class="mt-1">DETAILS</p></div>
+                <div id="detailOption2" class="w-1/4 border-y border-fontColor rounded-t-xl flex justify-center items-center cursor-pointer hover:opacity-90 h-8"><p class="mt-1">HARVEST</p></div>
+                <div id="detailOption3" class="w-1/4 border border-fontColor rounded-t-xl flex justify-center items-center cursor-pointer hover:opacity-90 h-8"><p class="mt-1">USES</p></div>
+                <div id="detailOption4" class="w-1/4 border-y border-r border-fontColor rounded-t-xl flex justify-center items-center cursor-pointer hover:opacity-90 h-8"><p class="mt-1">REFILLS</p></div>
             </div>
-            <div id="information" class="w-2/3 border-b border-x border-fontColor p-4 font-normal-font rounded-b-xl">
+            <div id="information" class="w-full md:w-2/3 border-b border-x border-fontColor p-4 font-normal-font rounded-b-xl">
                 <p class="mt-2 text-lg font-medium">DRIZZLE: 500ML</p>
                 <p class="mt-5 text-lg tracking-wider">Extra Virgin finishing oil made from olives that are picked early, when flavor is bold and antioxidants are highest. Made for eating, not heating.</p>
                 <p class="mt-4 text-lg font-medium">SIZZLE: 750ML</p>
@@ -109,7 +112,7 @@
             </div>
         </div>
     </main>
-    <img src="graza-logo.png" alt="graza logo" class="logo absolute top-1 left-16 h-28 w-52 transition-all duration-300 ease-in-out">
+    <img src="graza-logo.png" alt="graza logo" class="logo absolute top-5 md:top-1 left-16 h-28 w-52 transition-all duration-300 ease-in-out">
     <script src="script.js"></script>
 </body>
 </html>

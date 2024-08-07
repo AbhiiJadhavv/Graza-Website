@@ -7,7 +7,8 @@ module.exports = {
         'primary': '#F6E6D9',
         'fontColor': '#3C422E',
         'fillColor': '#FFF4EC',
-        'hoverColor': '#D1E030'
+        'hoverColor': '#D1E030',
+        'greenColor': '#9EEF80'
       },
       fontFamily: {
         'header-font': ['EB Garamond', 'sans-serif'],
