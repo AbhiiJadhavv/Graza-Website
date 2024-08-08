@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Select the divs for round1 and round2
+    
     const round1Con = document.getElementById('round1Con');
     const round2Con = document.getElementById('round2Con');
     const round1 = document.getElementById('round1');
@@ -121,14 +121,14 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const round1Con = document.getElementById('round1Con');
     const round2Con = document.getElementById('round2Con');
-    const payment = document.querySelector('.payment');
+    const payment = document.getElementById('payment');
 
     function updateRound1Content() {
-        payment.innerHTML = '<p>Add to Cart - $37</p>';
+        payment.innerHTML = 'Add to Cart - ';
     }
 
     function updateRound2Content() {
-        payment.innerHTML = '<p>Subscribe - $33.30</p>';
+        payment.innerHTML = 'Subscribe - ';
     }
 
     round1Con.addEventListener('click', updateRound1Content);
@@ -136,16 +136,83 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function changeBorder(selectedElement) {
-    // Get all imageOption elements
+    
     const imageOptions = document.querySelectorAll('.imageOption');
     
-    // Remove the 'border-fillColor' class from all imageOption elements
     imageOptions.forEach(option => {
         option.classList.remove('border-fillColor');
         option.classList.add('border-fontColor');
     });
     
-    // Add the 'border-fillColor' class to the clicked imageOption element
     selectedElement.classList.remove('border-fontColor');
     selectedElement.classList.add('border-fillColor');
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const sets1 = document.getElementById('sets1');
+    const set2 = document.getElementById('set2');
+    const set3 = document.getElementById('set3');
+    const set6 = document.getElementById('set6');
+    const oneTimePurchase = document.getElementById('oneTimePurchase');
+    const subscribeSave = document.getElementById('subscribeSave');
+
+    sets1.addEventListener('click', () => {
+        oneTimePurchase.innerHTML = `
+            <p class="ml-2">One Time Purchase</p><p id="round1value">$37</p>
+        `;
+        subscribeSave.innerHTML = `
+            <p class="ml-2">Subscribe & Save</p>
+            <div class="flex"><p class="opacity-50"><s>$37</s></p><p id="round2value">$33.30</p></div>
+        `;
+    });
+
+    set2.addEventListener('click', () => {
+        oneTimePurchase.innerHTML = `
+            <p class="ml-2">One Time Purchase</p>
+            <div class="flex"><p class="opacity-50"><s>$74</s></p><p id="round1value">$69</p></div>
+        `;
+        subscribeSave.innerHTML = `
+            <p class="ml-2">Subscribe & Save</p>
+            <div class="flex"><p class="opacity-50"><s>$74</s></p><p id="round2value">$64.17</p></div>
+        `;
+    });
+
+    set3.addEventListener('click', () => {
+        oneTimePurchase.innerHTML = `
+            <p class="ml-2">One Time Purchase</p>
+            <div class="flex"><p class="opacity-50"><s>$111</s></p><p id="round1value">$102</p></div>
+        `;
+        subscribeSave.innerHTML = `
+            <p class="ml-2">Subscribe & Save</p>
+            <div class="flex"><p class="opacity-50"><s>$111</s></p><p id="round2value">$94.86</p></div>
+        `;
+    });
+
+    set6.addEventListener('click', () => {
+        oneTimePurchase.innerHTML = `
+            <p class="ml-2">One Time Purchase</p>
+            <div class="flex"><p class="opacity-50"><s>$222</s></p><p id="round1value">$199</p></div>
+        `;
+        subscribeSave.innerHTML = `
+            <p class="ml-2">Subscribe & Save</p>
+            <div class="flex"><p class="opacity-50"><s>$222</s></p><p id="round2value">$185.07</p></div>
+        `;
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    
+    const round1Con = document.getElementById('round1Con');
+    const round2Con = document.getElementById('round2Con');
+    const bill = document.getElementById('bill');
+    const round1Value = document.getElementById('round1value').textContent;
+    const round2Value = document.getElementById('round2value').textContent;
+
+    round1Con.addEventListener('click', function () {
+        bill.textContent = round1Value;
+    });
+
+    round2Con.addEventListener('click', function () {
+        bill.textContent = round2Value;
+    });
+});

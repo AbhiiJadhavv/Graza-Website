@@ -40,7 +40,7 @@
             <div id="buyingSection" class="border w-full md:w-2/3 border-fontColor mt-4 p-5 rounded-2xl bg-fillColor font-normal-font text-lg tracking-wider font-medium">
                 <p>Quantity</p>
                 <div id="quantityOptions" class="grid grid-cols-2 md:grid-cols-4 gap-2 mt-2">
-                    <div class="h-20 rounded-lg border border-fontColor cursor-pointer">
+                    <div id="sets1" class="h-20 rounded-lg border border-fontColor cursor-pointer">
                         <div class="w-full h-2/5 bg-fontColor rounded-t-lg flex justify-center items-center font-discount-font tracking-tight font-bold">
                             <p class="text-fillColor text-xs">+10% Off</p>
                         </div>
@@ -48,7 +48,7 @@
                             <p class="text-2xl leading-3 mt-3">1</p><p class="text-base">Set</p>
                         </div>
                     </div>
-                    <div class="h-20 rounded-lg border border-fontColor cursor-pointer">
+                    <div id="set2" class="h-20 rounded-lg border border-fontColor cursor-pointer">
                         <div class="w-full h-2/5 bg-fontColor rounded-t-lg text-fillColor text-xs font-discount-font flex flex-col justify-center items-center tracking-tight font-bold leading-4">
                             <p>Free Shipping!</p>
                             <p>+14% Off</p>
@@ -57,7 +57,7 @@
                             <p class="text-2xl leading-3 mt-3">2</p><p class="text-base">Sets</p>
                         </div>
                     </div>
-                    <div class="h-20 rounded-lg border border-fontColor cursor-pointer">
+                    <div id="set3" class="h-20 rounded-lg border border-fontColor cursor-pointer">
                         <div class="w-full h-2/5 bg-fontColor rounded-t-lg text-fillColor text-xs font-discount-font flex flex-col justify-center items-center tracking-tight font-bold leading-4">
                             <p>Free Shipping!</p>
                             <p>+15% Off</p>
@@ -66,7 +66,7 @@
                             <p class="text-2xl leading-3 mt-3">3</p><p class="text-base">Sets</p>
                         </div>
                     </div>
-                    <div class="h-20 rounded-lg border border-fontColor cursor-pointer">
+                    <div id="set6" class="h-20 rounded-lg border border-fontColor cursor-pointer">
                         <div class="w-full h-2/5 bg-fontColor rounded-t-lg text-fillColor text-xs font-discount-font flex flex-col justify-center items-center tracking-tight font-bold leading-4">
                             <p>Free Shipping!</p>
                             <p>+17% Off</p>
@@ -78,21 +78,21 @@
                 </div>
                 <div id="round1Con" class="h-14 mt-3 border-dashed border-t border-fontColor flex items-center cursor-pointer hover:opacity-90">
                     <div id="round1" class="h-5 w-5 border border-fontColor rounded-full"></div>
-                    <div class="flex justify-between w-full"><p class="ml-2">One Time Purchase</p><p>$37</p></div>
+                    <div id="oneTimePurchase" class="flex justify-between w-full"><p class="ml-2">One Time Purchase</p><p id="round1value">$37</p></div>
                 </div>
                 <div id="round2Con" class="h-14 border-dashed border-t border-fontColor flex items-center cursor-pointer hover:opacity-90">
                     <div id="round2" class="h-5 w-5 border border-fontColor rounded-full bg-greenColor"></div>
-                    <div class="flex justify-between w-full">
+                    <div id="subscribeSave" class="flex justify-between w-full">
                         <p class="ml-2">Subscribe & Save</p>
-                        <div class="flex"><p class="opacity-50"><s>$37</s></p><p>$33.30</p></div>
+                        <div class="flex"><p class="opacity-50"><s>$37</s></p><p id="round2value">$33.30</p></div>
                     </div>
                 </div>
                 <div class="border border-fontColor rounded-full cursor-pointer flex justify-between items-center h-8 hover:opacity-90">
                     <p class="pl-5">Frequency: Every 1 Month</p><img src="arrow-image.png" alt="arrow image" class="h-3 w-3 mr-5">
                 </div>
                 <div class="mt-4 h-4 border-dashed border-t border-fontColor"></div>
-                <div class="payment border border-fontColor rounded-full cursor-pointer flex items-center justify-center bg-hoverColor h-9 hover:opacity-90">
-                    <p>Subscribe - $33.30</p>
+                <div class="border border-fontColor rounded-full cursor-pointer flex items-center justify-center bg-hoverColor h-9 hover:opacity-90">
+                    <pre id="payment">Subscribe - </pre><p id="bill">$33.30</p>
                 </div>
                 <div class="flex justify-center mt-4 leading-tight">
                     <p class="font-normal">Skip, Edit or Cancel Anytime</p>
