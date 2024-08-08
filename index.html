@@ -11,7 +11,7 @@
         <p class="font-normal-font flex justify-center text-xs font-semibold tracking-tighter leading-5">NEW! MEET THE REFILL CANS</p>
     </header>
     <main class="block md:flex max-w-full">
-        <div id="rightSide" class="w-full md:w-1/2 md:h-screen md:sticky md:top-0">
+        <div id="leftSide" class="w-full md:w-1/2 md:h-screen md:sticky md:top-0">
             <div class="image-container w-full h-full"><img id="mainImage" src="image-1.webp" class="w-full h-full object-cover" alt="image"></div>
             <div class="h-3/5 w-16 absolute top-64 left-8 hidden md:flex flex-col items-center justify-between">
                 <div class="imageOption h-16 w-16 border-2 border-fillColor rounded-full flex justify-center items-center cursor-pointer" onclick="changeImage('image-1.webp'), changeBorder(this)"><img src="image-1.webp" class="rounded-full" alt="image"></div>
@@ -22,7 +22,7 @@
                 <div class="imageOption h-16 w-16 border-2 border-fontColor rounded-full flex justify-center items-center cursor-pointer" onclick="changeImage('image-6.webp'), changeBorder(this)"><img src="image-6.webp" class="rounded-full" alt="image"></div>
             </div>
         </div>
-        <div id="leftSide" class="w-full md:w-1/2 flex flex-col items-center">
+        <div id="rightSide" class="w-full md:w-1/2 flex flex-col items-center">
             <div id="Navbar" class="hidden md:flex justify-end text-fontColor font-medium font-normal-font mt-5 tracking-wider text-lg w-full">
                 <a class="mr-10 cursor-pointer">Shop</a>
                 <a class="mr-10 cursor-pointer">Get Refills</a>
@@ -87,9 +87,11 @@
                         <div class="flex"><p class="opacity-50"><s>$37</s></p><p id="round2value">$33.30</p></div>
                     </div>
                 </div>
-                <div class="border border-fontColor rounded-full cursor-pointer flex justify-between items-center h-8 hover:opacity-90">
-                    <p class="pl-5">Frequency: Every 1 Month</p><img src="arrow-image.png" alt="arrow image" class="h-3 w-3 mr-5">
-                </div>
+                <select class="border border-fontColor rounded-full cursor-pointer flex justify-between items-center h-9 hover:opacity-90 outline-none bg-fillColor pl-5 pb-1 w-full">
+                    <option selected>Frequency: Every 1 Month</option>
+                    <option value="2months">Frequency: Every 2 Months</option>
+                    <option value="3months">Frequency: Every 3 Months</option>
+                </select>
                 <div class="mt-4 h-4 border-dashed border-t border-fontColor"></div>
                 <div class="border border-fontColor rounded-full cursor-pointer flex items-center justify-center bg-hoverColor h-9 hover:opacity-90">
                     <pre id="payment">Subscribe - </pre><p id="bill">$33.30</p>
